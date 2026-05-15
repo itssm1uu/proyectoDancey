@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // creamos una constante seleccionando la clase .contacto-form form
+    // creamos una constante seleccionando la clase .contacto-formulario form
     const formulario = document.querySelector('.contacto-formulario form');
 
     // revisamos que el formulario exista
@@ -19,19 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // comprobamos que los datos de ciertos campos estén bien, en caso de que no, se le aparecerá una alerta
             if (datos.nombre === "" || datos.email === "") {
-                alert("Por favor, rellena los campos obligatorios (Nombre y Email).");
+                alert("Por favor, rellena los campos obligatorios.");
                 return;
             }
 
             // simulamos el envío de datos al servidor
             console.log("Enviando solicitud de Bachillerato para:", datos.nombre);
-            
+
             // localiza el botón dentro del formulario para poder modificarle las propiedades y el texto
             const boton = formulario.querySelector('button');
 
             // guardamos el texto que tenía el botón por si necesitamos restaurarlo después
             const textoOriginal = boton.textContent;
-            
+
             boton.disabled = true;
             boton.textContent = "Enviando...";
             boton.style.opacity = "0.7";
