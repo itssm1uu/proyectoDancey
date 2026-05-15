@@ -22,15 +22,17 @@ botonLimpiar.onclick = function () {
 };
 
 // Esto compata el menu cuando clicas su menú
-botonCompactar.onclick = function () {
-    if (menu.style.display === "none") {
-        menu.style.display = "flex";
-        botonCompactar.textContent = ("↑");
-    } else {
-        menu.style.display = "none";
-        botonCompactar.textContent = ("↓");
-    }
-};
+if (botonCompactar) {
+    botonCompactar.onclick = function () {
+        if (menu.style.display === "none") {
+            menu.style.display = "flex";
+            botonCompactar.textContent = ("↑");
+        } else {
+            menu.style.display = "none";
+            botonCompactar.textContent = ("↓");
+        }
+    };
+}
 
 // mira el tamaño de la ventana y cambia la visibilidad del botón y el menú si es necesario 
 function visibilityCheck() {
