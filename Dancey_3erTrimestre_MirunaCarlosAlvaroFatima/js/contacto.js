@@ -51,6 +51,6 @@ function visibilityCheck() {
 
 // se llama cuando se resetea la página y mira los caracteres del textarea y la visibilidad del menú
 function onReset() {
-    visibilityCheck()
+    visibilityCheck();
     caracteresRest.innerHTML = (textaCaractLim - ConTextarea.value.length) + " / " + textaCaractLim + " caracteres.";
 }
