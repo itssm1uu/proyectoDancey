@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // simulamos el envío de datos al servidor
-            console.log("Enviando solicitud de Bachillerato para:", datos.nombre);
+            console.log("Enviando solicitud de Bachillerato para:", datos.nombre, datos.email);
 
             // localiza el botón dentro del formulario para poder modificarle las propiedades y el texto
             const boton = formulario.querySelector('button');
